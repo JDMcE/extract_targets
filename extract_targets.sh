@@ -51,3 +51,5 @@ done
 
 # Remove all empty results
 find . -type f -empty -print -delete
+
+echo "Done"
