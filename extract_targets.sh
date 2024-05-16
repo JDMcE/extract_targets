@@ -42,9 +42,9 @@ for gnmap_file in "$@"; do
         output_file="port_${port}_open.txt"
 
         if [ "$include_hostname" = true ]; then
-            grep "$port/open/" "$gnmap_file" | awk -F" " '{print $3}' | tr '()' | sort -u >> "$output_file"
+            grep " $port/open/" "$gnmap_file" | awk -F" " '{print $3}' | tr '()' | sort -u >> "$output_file"
         else
-            grep "$port/open/" "$gnmap_file" | awk -F" " '{print $2}' | sort -u >> "$output_file"
+            grep " $port/open/" "$gnmap_file" | awk -F" " '{print $2}' | sort -u >> "$output_file"
         fi
     done
 done
